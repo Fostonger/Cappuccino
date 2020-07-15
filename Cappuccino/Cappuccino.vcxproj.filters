@@ -1,36 +1,44 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Исходные файлы">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Cappuccino">
+      <UniqueIdentifier>{6A85038A-563D-45D7-BF44-1E33AB1BE0C7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы заголовков">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Файлы ресурсов">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Cappuccino\Events">
+      <UniqueIdentifier>{0EB6F39A-7ACC-F130-C343-7D522F99C2B8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Cappuccino\Core.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
+    <ClInclude Include="src\Cappuccino.h" />
     <ClInclude Include="src\Cappuccino\Application.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Cappuccino</Filter>
     </ClInclude>
-    <ClInclude Include="src\Cappuccino.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="src\Cappuccino\Core.h">
+      <Filter>Cappuccino</Filter>
     </ClInclude>
-    <ClInclude Include="src\EntryPoint.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="src\Cappuccino\Events\ApplicationEvent.h">
+      <Filter>Cappuccino\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Cappuccino\Events\Event.h">
+      <Filter>Cappuccino\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cappuccino\Events\KeyEvent.h">
+      <Filter>Cappuccino\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cappuccino\Events\MouseEvent.h">
+      <Filter>Cappuccino\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cappuccino\Log.h">
+      <Filter>Cappuccino</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Cappuccino\Application.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Cappuccino</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Cappuccino\Log.cpp">
+      <Filter>Cappuccino</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

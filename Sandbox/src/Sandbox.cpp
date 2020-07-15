@@ -3,7 +3,7 @@
 class Sandbox : public Cappuccino::Application {
 public:
 	Sandbox() {
-		printf("sandboxes' only\n");
+		
 	}
 
 	~Sandbox() {

@@ -7,3 +7,5 @@
 		#define CAP_API _declspec(dllimport)
 	#endif
 #endif
+
+#define BIT(x) (1 << x)

@@ -1,0 +1,3 @@
+[submodule "Cappuccino/vendor/spdlog"]
+	path = Cappuccino/vendor/spdlog
+	url = https://github.com/gabime/spdlog
