@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Cappuccino/Core.h"
-#include "spdlog/fmt/ostr.h"
+
 
 #include <string>
 #include <functional>
@@ -64,4 +64,9 @@ namespace Cappuccino {
 	private:
 		Event& m_Event;
 	};
+
+	inline std::ostream& operator<<(std::ostream& os, const Event& e)
+	{
+		return os << e.ToString();
+	}
 }

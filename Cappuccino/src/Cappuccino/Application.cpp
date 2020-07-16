@@ -1,4 +1,5 @@
 #include "Application.h"
+
 #include "Cappuccino/Log.h"
 #include "Cappuccino/Events/ApplicationEvent.h"
 
@@ -11,9 +12,15 @@ namespace Cappuccino{
 	}
 
 	void Application::Run() {
-		WindowResizeEvent a(1080, 720);
-
-		CP_TRACE(a);
+		WindowResizeEvent e(1280, 720);
+		if (e.IsInCategory(EventCategoryApplication))
+		{
+			CP_TRACE(e);
+		}
+		if (e.IsInCategory(EventCategoryInput))
+		{
+			CP_TRACE(e);
+		}
 
 		while (true);
 	}
