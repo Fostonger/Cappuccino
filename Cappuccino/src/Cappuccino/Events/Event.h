@@ -1,10 +1,7 @@
 #pragma once
 
 #include "Cappuccino/Core.h"
-
-
-#include <string>
-#include <functional>
+#include "cappch.h"
 
 namespace Cappuccino {
 	enum class EventType {

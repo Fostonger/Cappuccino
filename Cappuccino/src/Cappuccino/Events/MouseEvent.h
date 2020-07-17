@@ -2,7 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
 
 namespace Cappuccino {
 	class CAP_API MouseMovedEvent : public Event {

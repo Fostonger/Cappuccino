@@ -9,6 +9,12 @@ workspace "Cappuccino"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution direstory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Cappuccino/vendor/GLFW/include"
+
+include "Cappuccino/vendor/GLFW"
+
 project "Cappuccino"
 	location "Cappuccino"
 	kind "SharedLib"
@@ -17,6 +23,9 @@ project "Cappuccino"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "cappch.h"
+	pchsource "Cappuccino/src/cappch.cpp"
+
 	files{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
@@ -24,7 +33,13 @@ project "Cappuccino"
 
 	includedirs{
 		"%{prj.name}/vendor/spdlog/include",
-		"%{prj.name}/src"
+		"%{prj.name}/src",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
