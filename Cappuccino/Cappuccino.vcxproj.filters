@@ -7,6 +7,18 @@
     <Filter Include="Cappuccino\Events">
       <UniqueIdentifier>{0EB6F39A-7ACC-F130-C343-7D522F99C2B8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Cappuccino\ImGui">
+      <UniqueIdentifier>{14E27814-00DB-9766-290D-7DEB15657772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Cappuccino.h" />
@@ -28,22 +40,52 @@
     <ClInclude Include="src\Cappuccino\Events\MouseEvent.h">
       <Filter>Cappuccino\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Cappuccino\ImGui\ImGuiLayer.h">
+      <Filter>Cappuccino\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cappuccino\Layer.h">
+      <Filter>Cappuccino</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cappuccino\LayerStack.h">
+      <Filter>Cappuccino</Filter>
+    </ClInclude>
     <ClInclude Include="src\Cappuccino\Log.h">
       <Filter>Cappuccino</Filter>
     </ClInclude>
+    <ClInclude Include="src\Cappuccino\Window.h">
+      <Filter>Cappuccino</Filter>
+    </ClInclude>
     <ClInclude Include="src\EntryPoint.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\cappch.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
-    <ClInclude Include="src\Cappuccino\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Cappuccino\Application.cpp">
       <Filter>Cappuccino</Filter>
     </ClCompile>
+    <ClCompile Include="src\Cappuccino\ImGui\ImGuiLayer.cpp">
+      <Filter>Cappuccino\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Cappuccino\Layer.cpp">
+      <Filter>Cappuccino</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Cappuccino\LayerStack.cpp">
+      <Filter>Cappuccino</Filter>
+    </ClCompile>
     <ClCompile Include="src\Cappuccino\Log.cpp">
       <Filter>Cappuccino</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\cappch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

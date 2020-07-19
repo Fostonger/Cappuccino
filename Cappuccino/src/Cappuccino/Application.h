@@ -1,10 +1,10 @@
 #pragma once
 #include "Core.h"
-#include "Events/Event.h"
-#include "Cappuccino/Events/ApplicationEvent.h"
-#include "Cappuccino/Events/MouseEvent.h"
 
 #include "Window.h"
+#include "Cappuccino/LayerStack.h"
+#include "Events/Event.h"
+#include "Cappuccino/Events/ApplicationEvent.h"
 
 namespace Cappuccino {
 
@@ -18,13 +18,19 @@ namespace Cappuccino {
 
 		void OnEvent(Event& e);
 
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* layer);
+
+		inline static Application& Get() { return *s_Instance; }
+		inline Window& GetWindow() { return *m_Window; }
 	private:
 		bool OnWindowClosed(WindowCloseEvent& e);
-		bool OnMouseMovedEvent(MouseMovedEvent& e);
 
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
-		float m_Red, m_Green, m_Blue = 1;
+		LayerStack m_LayerStack;
+	private:
+		static Application* s_Instance;
 	};
 
 	//To be defined in client
