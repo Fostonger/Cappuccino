@@ -8,14 +8,19 @@ public:
 	{
 	}
 
+	void ExampleLayer::OnAttach() {
+		CP_TRACE("Example Layer attached");
+	}
+
 	void OnUpdate() override
 	{
-		CP_INFO("ExampleLayer: Update");
+		//CP_INFO("ExampleLayer: Update");
 	}
 
 	void OnEvent(Cappuccino::Event& event) override
 	{
-		CP_TRACE("{0}", event);
+		CP_TRACE("Example layer's OnEvent");
+		//CP_TRACE("{0}", event);
 	}
 };
 
