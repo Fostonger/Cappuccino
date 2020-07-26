@@ -7,3 +7,6 @@
 [submodule "Cappuccino/vendor/imgui"]
 	path = Cappuccino/vendor/imgui
 	url = https://github.com/TheCherno/imgui
+[submodule "Cappuccino/vendor/glm"]
+	path = Cappuccino/vendor/glm
+	url = https://github.com/g-truc/glm
