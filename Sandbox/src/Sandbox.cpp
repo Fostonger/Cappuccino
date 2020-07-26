@@ -14,13 +14,17 @@ public:
 
 	void OnUpdate() override
 	{
-		//CP_INFO("ExampleLayer: Update");
+		if (Cappuccino::Input::IsKeyPressed(CAP_KEY_TAB))
+			CP_TRACE("Tab is being pressed");
 	}
 
 	void OnEvent(Cappuccino::Event& event) override
 	{
-		CP_TRACE("Example layer's OnEvent");
-		//CP_TRACE("{0}", event);
+		if (event.GetEventType() == Cappuccino::EventType::KeyPressed)
+		{
+			Cappuccino::KeyPressedEvent& e = (Cappuccino::KeyPressedEvent&)event;
+			CP_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 };
 

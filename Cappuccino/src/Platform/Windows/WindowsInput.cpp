@@ -1,8 +1,8 @@
-#include "WindowsInput.h"
 #include "cappch.h"
+#include "WindowsInput.h"
 
-#include <GLFW/glfw3.h>
 #include "Cappuccino/Application.h"
+#include <GLFW/glfw3.h>
 
 namespace Cappuccino {
 
@@ -20,20 +20,24 @@ namespace Cappuccino {
 		auto state = glfwGetMouseButton(window, button);
 		return state == GLFW_PRESS;
 	}
-	float WindowsInput::GetMouseXImpl()
+	std::pair<float, float> WindowsInput::GetMousePositionImpl()
 	{
 		auto window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetNativeWindow());
 		double xpos, ypos;
 		glfwGetCursorPos(window, &xpos, &ypos);
 
-		return (float)xpos;
+		return { (float)xpos, (float)ypos };
+	}
+	float WindowsInput::GetMouseXImpl()
+	{
+		auto [x, y] = GetMousePositionImpl();
+
+		return x;
 	}
 	float WindowsInput::GetMouseYImpl()
 	{
-		auto window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetNativeWindow());
-		double xpos, ypos;
-		glfwGetCursorPos(window, &xpos, &ypos);
+		auto [x, y] = GetMousePositionImpl();
 
-		return (float)ypos;
+		return y;
 	}
 }

@@ -82,7 +82,6 @@ namespace Cappuccino {
 
 	void ImGuiLayer::OnEvent(Event& event)
 	{
-		CP_TRACE("ImGui's OnEvent function");
 		EventDispatcher dispatcher(event);
 		dispatcher.Dispatch<MouseButtonPressedEvent>(CP_BIND_EVENT_FN(ImGuiLayer::OnMouseButtonPressedEvent));
 		dispatcher.Dispatch<MouseButtonReleasedEvent>(CP_BIND_EVENT_FN(ImGuiLayer::OnMouseButtonReleasedEvent));

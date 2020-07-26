@@ -43,6 +43,12 @@
     <ClInclude Include="src\Cappuccino\ImGui\ImGuiLayer.h">
       <Filter>Cappuccino\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Cappuccino\Input.h">
+      <Filter>Cappuccino</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cappuccino\KeyCodes.h">
+      <Filter>Cappuccino</Filter>
+    </ClInclude>
     <ClInclude Include="src\Cappuccino\Layer.h">
       <Filter>Cappuccino</Filter>
     </ClInclude>
@@ -52,12 +58,18 @@
     <ClInclude Include="src\Cappuccino\Log.h">
       <Filter>Cappuccino</Filter>
     </ClInclude>
+    <ClInclude Include="src\Cappuccino\MouseButtonCodes.h">
+      <Filter>Cappuccino</Filter>
+    </ClInclude>
     <ClInclude Include="src\Cappuccino\Window.h">
       <Filter>Cappuccino</Filter>
     </ClInclude>
     <ClInclude Include="src\EntryPoint.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
       <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
+      <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
@@ -82,6 +94,9 @@
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
       <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
